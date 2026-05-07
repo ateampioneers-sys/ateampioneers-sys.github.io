@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Pioneers | Home Remodeling in Saylorsburg, PA</title>
+  <meta name="description" content="Construction Pioneers serves Saylorsburg & Monroe County, PA with expert kitchen, bathroom, basement remodeling, additions, and decks. Free estimates + 3D renderings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fafafa;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== COLORS ===== */
+    :root {
+      --red: #c62828;
+      --red-dark: #b71c1c;
+      --red-light: #ef5350;
+      --black: #1a1a1a;
+      --black-soft: #2d2d2d;
+      --gray-100: #f5f5f5;
+      --gray-200: #eeeeee;
+      --gray-300: #e0e0e0;
+      --gray-500: #9e9e9e;
+      --gray-700: #616161;
+      --white: #ffffff;
+      --max-width: 1120px;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      height: 70px;
+    }
+    nav .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    nav .logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 4px;
+    }
+    nav .logo span {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+    nav .logo span .red { color: var(--red-light); }
+    nav .nav-links {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+    }
+    nav .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    nav .nav-links a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+    nav .nav-links a.cta-nav {
+      background: var(--red);
+      color: var(--white);
+    }
+    nav .nav-links a.cta-nav:hover {
+      background: var(--red-dark);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 26px; height: 2.5px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(198,40,40,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(198,40,40,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+    .hero-logo {
+      height: 100px;
+      width: auto;
+      margin-bottom: 24px;
+      border-radius: 8px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .hero h1 .red { color: var(--red-light); }
+    .hero .tagline {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: rgba(255,255,255,0.6);
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .hero .location {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 32px;
+    }
+    .hero .location svg { width: 16px; height: 16px; fill: var(--red-light); }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(198,40,40,0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.25);
+    }
+    .btn-secondary:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* ===== SECTIONS (generic) ===== */
+    section { padding: 80px 24px; }
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.3px;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--gray-700);
+      max-width: 600px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+    .about-text strong { color: var(--red); }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-card .label {
+      font-size: 0.85rem;
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+
+    /* ===== SERVICES ===== */
+    #services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 32px 24px;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-align: center;
+    }
+    .service-card:hover {
+      border-color: var(--red);
+      box-shadow: 0 8px 28px rgba(198,40,40,0.10);
+      transform: translateY(-4px);
+    }
+    .service-card .icon {
+      width: 56px; height: 56px;
+      background: var(--red);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .service-card .icon svg { width: 28px; height: 28px; fill: var(--white); }
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--gray-700);
+      line-height: 1.55;
+    }
+    .service-card .click-hint {
+      font-size: 0.78rem;
+      color: var(--red);
+      font-weight: 600;
+      margin-top: 12px;
+      opacity: 0.7;
+    }
+
+    /* ===== MODAL ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--white);
+      border-radius: 16px;
+      max-width: 640px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 40px 32px;
+      position: relative;
+      animation: modalIn 0.25s ease-out;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      color: var(--gray-500);
+      cursor: pointer;
+      padding: 4px 8px;
+      line-height: 1;
+    }
+    .modal-close:hover { color: var(--black); }
+    .modal h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .modal .modal-service-tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+    .modal p.desc {
+      font-size: 0.98rem;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .modal .gallery-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 12px;
+    }
+    .modal .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .modal .gallery .placeholder {
+      aspect-ratio: 1;
+      background: var(--gray-100);
+      border: 1px dashed var(--gray-300);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      text-align: center;
+      padding: 8px;
+    }
+    .modal .gallery img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      background: var(--black);
+      color: var(--white);
+    }
+    #contact .section-label { color: var(--red-light); }
+    #contact .section-title { color: var(--white); }
+    #contact .section-subtitle { color: rgba(255,255,255,0.5); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .contact-info h4 {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .contact-info p {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .contact-info a {
+      color: var(--red-light);
+      text-decoration: none;
+    }
+    .contact-info a:hover { text-decoration: underline; }
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 4px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: var(--white);
+      font-size: 0.95rem;
+      font-family: inherit;
+      margin-bottom: 16px;
+      transition: border 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--red);
+    }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form button {
+      width: 100%;
+      padding: 14px;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover { background: var(--red-dark); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.85rem;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 70px; left: 0; right: 0;
+        flex-direction: column;
+        background: rgba(26,26,26,0.98);
+        padding: 16px 24px;
+        gap: 4px;
+        transform: translateY(-110%);
+        transition: transform 0.3s;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+      .nav-links.open { transform: translateY(0); }
+      nav .nav-links a { padding: 12px 16px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .modal .gallery { grid-template-columns: repeat(2, 1fr); }
+      .about-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="Construction Pioneers">
+        <span>Construction <span class="red">Pioneers</span></span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" class="cta-nav">Free Estimate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <img src="logo.png" alt="Construction Pioneers" class="hero-logo">
+      <h1>Construction <span class="red">Pioneers</span></h1>
+      <p class="tagline">Professional Home Remodeling Throughout Monroe County, PA</p>
+      <p class="location">
+        <svg viewBox="0 0 20 20"><path d="M10 0C6.13 0 3 3.13 3 7c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+        Saylorsburg, PA — Serving Monroe & Surrounding Counties
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Free Estimate + 3D Render</a>
+        <a href="#services" class="btn btn-secondary">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">About Us</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Built on Craftsmanship, Driven by Vision</h2>
+          <p>
+            Founded in 2021, <strong>Construction Pioneers</strong> was built from a simple belief —
+            that every home deserves exceptional craftsmanship, and every homeowner deserves a
+            remodeling experience that is collaborative, transparent, and stress-free.
+          </p>
+          <p>
+            While our company officially opened its doors in 2021, our roots run much deeper. With
+            <strong>over 15 years of hands-on experience</strong> in the construction industry,
+            we bring a level of skill, knowledge, and reliability that only comes from years spent
+            perfecting the trade. From rough framing to finish trim, from laying subfloors to
+            installing custom cabinetry — we've done it all, and we've done it well.
+          </p>
+          <p>
+            Our mission is to redefine what it means to work with a remodeling contractor. We don't
+            just build spaces — we build <strong>relationships</strong> with our clients, with fellow
+            tradesmen, and with the community we serve. Every project is an opportunity to prove that
+            quality, professionalism, and trust still matter.
+          </p>
+          <p>
+            At the heart of our approach is a commitment to <strong>collaboration</strong>. We begin
+            every project with a free consultation and a <strong>3D rendering</strong> of your
+            remodeled space — so you can see exactly what we're building before we break ground.
+            Throughout construction, we provide regular updates on progress, timelines, and any
+            changes. We use only top-quality materials and equipment, and every build follows current
+            inspection codes. Because your space should be as safe and durable as it is beautiful.
+          </p>
+          <p>
+            We are building a <strong>network of trusted professionals</strong> across Monroe County
+            and the surrounding areas — electricians, plumbers, HVAC technicians, finish carpenters,
+            and specialty trades — who share our vision of superior quality and professional service.
+            When you hire Construction Pioneers, you're not just hiring a contractor. You're hiring a
+            team that cares.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="num">15+</div>
+            <div class="label">Years of Hands-On Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">2021</div>
+            <div class="label">Company Founded in Saylorsburg, PA</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">5</div>
+            <div class="label">Core Remodeling Services</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">Free</div>
+            <div class="label">Estimates + 3D Renderings Included</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Our Remodeling Services</h2>
+      <p class="section-subtitle">
+        From kitchens to decks, we bring precision craftsmanship and a collaborative process
+        to every project. Click a service below to learn more and see our work.
+      </p>
+      <div class="services-grid">
+
+        <!-- Kitchen -->
+        <div class="service-card" data-service="0">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-7V4h7v7zm-9-7v7H4V4h6zm0 16H4v-7h6v7zm2 0v-7h7v7h-7z"/></svg>
+          </div>
+          <h3>Kitchens</h3>
+          <p>Complete kitchen transformations — cabinetry, countertops, layout redesign, and premium finish work.</p>
+          <div class="click-hint">Click to expand →</div>
+        </div>
+
+        <!-- Bathrooms -->
+        <div class="service-card" data-service="1">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M21.55 16.77A7.48 7.48 0 0120 20.5a7.48 7.48 0 01-5.27 2.23H9.27A7.48 7.48 0 014 20.5a7.48 7.48 0 01-2.23-5.27V12c0-1.1.9-2 2-2h.97l.88-3.52c.2-.78.9-1.33 1.73-1.35l5.56-.48 1.44 2.34h2.65c1.1 0 2 .9 2 2v4h.97c.6 0 1.13.28 1.55.77z"/></svg>
+          </div>
+          <h3>Bathrooms</h3>
+          <p>Full bathroom remodels — tile, vanities, fixtures, waterproofing, and spa-quality finishes.</p>
+          <div class="click-hint">Click to expand →</div>
+        </div>
+
+        <!-- Basements -->
+        <div class="service-card" data-service="2">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M19 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm-4 14v-1c0-1.66 1.34-3 3-3h2c1.66 0 3 1.34 3 3v1H8z"/></svg>
+          </div>
+          <h3>Basements</h3>
+          <p>Basement finishing and waterproofing — transform unused space into livable, functional areas.</p>
+          <div class="click-hint">Click to expand →</div>
+        </div>
+
+        <!-- Additions -->
+        <div class="service-card" data-service="3">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-7-9h2V8h-2v2zm0 4h2v-2h-2v2zm-4 0h2v-2H8v2zm0-4h2V8H8v2z"/></svg>
+          </div>
+          <h3>Additions</h3>
+          <p>Custom home additions — bedrooms, sunrooms, extensions with full structural integrity and code compliance.</p>
+          <div class="click-hint">Click to expand →</div>
+        </div>
+
+        <!-- Decks -->
+        <div class="service-card" data-service="4">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M2 15.5v2h20v-2H2zm0-3v-4c0-.83.67-1.5 1.5-1.5h17c.83 0 1.5.67 1.5 1.5v4H2zm1.5 6c-.83 0-1.5-.67-1.5-1.5V20h20v-4.5c0 .83-.67 1.5-1.5 1.5h-17z"/></svg>
+          </div>
+          <h3>Decks</h3>
+          <p>Custom deck building — pressure-treated, composite, and multi-level designs built to last.</p>
+          <div class="click-hint">Click to expand →</div>
+        </div>
+
+        <!-- Free Estimate CTA -->
+        <div class="service-card" style="background:var(--red);border-color:var(--red);cursor:pointer;" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          <div class="icon" style="background:rgba(255,255,255,0.2);">
+            <svg viewBox="0 0 24 24" style="fill:var(--white);"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+          </div>
+          <h3 style="color:var(--white);">Free Estimate</h3>
+          <p style="color:rgba(255,255,255,0.85);">Get a free consultation + 3D rendering of your remodeled space. Click to get started.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
+      <div class="modal-service-tag" id="modalTag">Service</div>
+      <h2 id="modalTitle">Service Name</h2>
+      <p class="desc" id="modalDesc">Detailed description goes here.</p>
+      <div class="gallery-label">Project Gallery</div>
+      <div class="gallery" id="modalGallery">
+        <!-- Gallery images populated by JS, or shows placeholder -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-label">Get In Touch</div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title">Start Your Project</h2>
+          <p class="section-subtitle" style="margin-bottom:24px;">
+            Every project begins with a free estimate and a 3D rendering of your new space.
+            Let's build something together.
+          </p>
+          <h4>Construction Pioneers</h4>
+          <p>Saylorsburg, PA — Monroe County<br>
+          <a href="tel:">Call Us</a> · <a href="mailto:">Email Us</a></p>
+          <p style="font-size:0.9rem;color:rgba(255,255,255,0.45);">
+            Serving Saylorsburg, Stroudsburg, East Stroudsburg, Mount Pocono, Bartonsville,
+            Tannersville, and all of Monroe County, PA.
+          </p>
+        </div>
+        <div>
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="message">Tell Us About Your Project</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send — Get Your Free Estimate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    &copy; 2025 Construction Pioneers — Saylorsburg, PA. All rights reserved. &nbsp;|&nbsp;
+    <a href="#">Privacy</a>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== SERVICE DATA =====
+    const services = [
+      {
+        title: 'Kitchen Remodeling',
+        tag: 'Kitchens',
+        desc: 'From top to bottom, we handle every aspect of your kitchen remodel. We work with credited professionals in specialty trades to create a space with structural integrity, form and function, and excellent finish work. Our collaborative process lets you plan and execute your vision down to the smallest detail — from custom cabinetry and countertops to layout redesign and premium appliances.',
+        photos: []  // Add filenames here later, like '1.jpg', '2.jpg'
+      },
+      {
+        title: 'Bathroom Remodeling',
+        tag: 'Bathrooms',
+        desc: 'Transform your bathroom into a space that combines comfort, safety, and style. We handle everything from tile work and custom vanities to lighting, plumbing fixtures, and waterproofing. Every surface is finished with the same attention to detail and quality craftsmanship that defines Construction Pioneers.',
+        photos: []
+      },
+      {
+        title: 'Basement Finishing',
+        tag: 'Basements',
+        desc: 'Turn your basement into a finished, functional living space. Whether you need a home theater, a guest suite, a home office, or a rental unit, we handle framing, insulation, drywall, flooring, lighting, and egress compliance. We build according to current inspection codes so your new space is safe, legal, and beautiful.',
+        photos: []
+      },
+      {
+        title: 'Home Additions',
+        tag: 'Additions',
+        desc: 'Expand your home with a custom addition that blends seamlessly with your existing structure. From sunrooms and extra bedrooms to full second-story additions, we manage the entire process — foundation to finish. Every addition is engineered for structural integrity and built to code.',
+        photos: []
+      },
+      {
+        title: 'Custom Decks',
+        tag: 'Decks',
+        desc: 'Build the outdoor space you\'ve always wanted. We design and build custom decks using premium materials — pressure-treated lumber, composite decking, or multi-level designs with built-in seating and lighting. Each deck is built to last, with proper structural support and professional finishing.',
+        photos: []
+      }
+    ];
+
+    // ===== NAV MOBILE TOGGLE =====
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    // Close nav on link click (mobile)
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // ===== MODAL LOGIC =====
+    const overlay = document.getElementById('modalOverlay');
+    const closeBtn = document.getElementById('modalCloseBtn');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalTag = document.getElementById('modalTag');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalGallery = document.getElementById('modalGallery');
+
+    function openModal(index) {
+      const s = services[index];
+      modalTag.textContent = s.tag;
+      modalTitle.textContent = s.title;
+      modalDesc.textContent = s.desc;
+
+      // Build gallery
+      modalGallery.innerHTML = '';
+      if (s.photos && s.photos.length > 0) {
+        // s.photos should be array like ['1.jpg','2.jpg']
+        s.photos.forEach(p => {
+          const img = document.createElement('img');
+          img.src = 'images/' + s.tag.toLowerCase() + '/' + p;
+          img.alt = s.title + ' photo';
+          img.loading = 'lazy';
+          modalGallery.appendChild(img);
+        });
+      } else {
+        // Placeholder grid
+        for (let i = 0; i < 3; i++) {
+          const div = document.createElement('div');
+          div.className = 'placeholder';
+          div.textContent = 'Project gallery coming soon';
+          modalGallery.appendChild(div);
+        }
+      }
+
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Click service cards
+    document.querySelectorAll('.service-card[data-service]').forEach(card => {
+      card.addEventListener('click', function() {
+        const idx = parseInt(this.dataset.service, 10);
+        openModal(idx);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+</html>
