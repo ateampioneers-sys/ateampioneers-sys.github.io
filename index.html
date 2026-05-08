@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Construction Pioneers | Home Remodeling in Saylorsburg, PA</title>
-  <meta name="description" content="Construction Pioneers serves Saylorsburg & Monroe County, PA with expert kitchen, bathroom, basement remodeling, additions, and decks. Free estimates + 3D renderings.">
+  <meta name="description" content="Construction Pioneers serves Saylorsburg & Monroe County, PA with expert kitchen, bathroom, basement remodeling, additions, and decks. Estimates available.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -541,7 +541,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#contact" class="cta-nav">Free Estimate</a></li>
+        <li><a href="#contact" class="cta-nav">Estimate</a></li>
       </ul>
     </div>
   </nav>
@@ -557,7 +557,7 @@
         Saylorsburg, PA — Serving Monroe & Surrounding Counties
       </p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">Free Estimate + 3D Render</a>
+        <a href="#contact" class="btn btn-primary">Get an Estimate</a>
         <a href="#services" class="btn btn-secondary">Our Services</a>
       </div>
     </div>
@@ -590,11 +590,11 @@
           </p>
           <p>
             At the heart of our approach is a commitment to <strong>collaboration</strong>. We begin
-            every project with a free consultation and a <strong>3D rendering</strong> of your
-            remodeled space — so you can see exactly what we're building before we break ground.
-            Throughout construction, we provide regular updates on progress, timelines, and any
-            changes. We use only top-quality materials and equipment, and every build follows current
-            inspection codes. Because your space should be as safe and durable as it is beautiful.
+            every project with a detailed consultation and walk-through of your space — so you know
+            exactly what we're building before we break ground. Throughout construction, we provide
+            regular updates on progress, timelines, and any changes. We use only top-quality
+            materials and equipment, and every build follows current inspection codes. Because your
+            space should be as safe and durable as it is beautiful.
           </p>
           <p>
             We are building a <strong>network of trusted professionals</strong> across Monroe County
@@ -618,8 +618,8 @@
             <div class="label">Core Remodeling Services</div>
           </div>
           <div class="stat-card">
-            <div class="num">Free</div>
-            <div class="label">Estimates + 3D Renderings Included</div>
+            <div class="num">100%</div>
+            <div class="label">Code-Compliant, Quality Craftsmanship</div>
           </div>
         </div>
       </div>
@@ -687,13 +687,13 @@
           <div class="click-hint">Click to expand →</div>
         </div>
 
-        <!-- Free Estimate CTA -->
+        <!-- Estimate CTA -->
         <div class="service-card" style="background:var(--red);border-color:var(--red);cursor:pointer;" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
           <div class="icon" style="background:rgba(255,255,255,0.2);">
             <svg viewBox="0 0 24 24" style="fill:var(--white);"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
           </div>
-          <h3 style="color:var(--white);">Free Estimate</h3>
-          <p style="color:rgba(255,255,255,0.85);">Get a free consultation + 3D rendering of your remodeled space. Click to get started.</p>
+          <h3 style="color:var(--white);">Get an Estimate</h3>
+          <p style="color:rgba(255,255,255,0.85);">Schedule a consultation for your remodeling project. Click to get started.</p>
         </div>
 
       </div>
@@ -722,19 +722,19 @@
         <div class="contact-info">
           <h2 class="section-title">Start Your Project</h2>
           <p class="section-subtitle" style="margin-bottom:24px;">
-            Every project begins with a free estimate and a 3D rendering of your new space.
+            Every project begins with a detailed estimate and an honest conversation about your space.
             Let's build something together.
           </p>
           <h4>Construction Pioneers</h4>
           <p>Saylorsburg, PA — Monroe County<br>
-          <a href="tel:">Call Us</a> · <a href="mailto:">Email Us</a></p>
+          <a href="tel:+15709949754">570-994-9754</a> · <a href="mailto:info@papioneers.com">info@papioneers.com</a></p>
           <p style="font-size:0.9rem;color:rgba(255,255,255,0.45);">
             Serving Saylorsburg, Stroudsburg, East Stroudsburg, Mount Pocono, Bartonsville,
             Tannersville, and all of Monroe County, PA.
           </p>
         </div>
         <div>
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form class="contact-form" id="contactForm">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email Address</label>
@@ -743,7 +743,7 @@
             <input type="tel" id="phone" name="phone">
             <label for="message">Tell Us About Your Project</label>
             <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send — Get Your Free Estimate</button>
+            <button type="submit">Send — Request Your Estimate</button>
           </form>
         </div>
       </div>
@@ -759,36 +759,59 @@
   <!-- ===== JAVASCRIPT ===== -->
   <script>
     // ===== SERVICE DATA =====
+    // Photos: Use full https:// URLs (e.g., from Unsplash) or local filenames like '1.jpg'
+    // (which load from images/{tag}/{filename}). Mix and match freely.
+    // The current photos are from Unsplash — free for commercial use, no attribution required.
     const services = [
       {
         title: 'Kitchen Remodeling',
         tag: 'Kitchens',
         desc: 'From top to bottom, we handle every aspect of your kitchen remodel. We work with credited professionals in specialty trades to create a space with structural integrity, form and function, and excellent finish work. Our collaborative process lets you plan and execute your vision down to the smallest detail — from custom cabinetry and countertops to layout redesign and premium appliances.',
-        photos: []  // Add filenames here later, like '1.jpg', '2.jpg'
+        photos: [
+          'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format&fit=crop'
+        ]
       },
       {
         title: 'Bathroom Remodeling',
         tag: 'Bathrooms',
         desc: 'Transform your bathroom into a space that combines comfort, safety, and style. We handle everything from tile work and custom vanities to lighting, plumbing fixtures, and waterproofing. Every surface is finished with the same attention to detail and quality craftsmanship that defines Construction Pioneers.',
-        photos: []
+        photos: [
+          'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80&auto=format&fit=crop'
+        ]
       },
       {
         title: 'Basement Finishing',
         tag: 'Basements',
         desc: 'Turn your basement into a finished, functional living space. Whether you need a home theater, a guest suite, a home office, or a rental unit, we handle framing, insulation, drywall, flooring, lighting, and egress compliance. We build according to current inspection codes so your new space is safe, legal, and beautiful.',
-        photos: []
+        photos: [
+          'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=800&q=80&auto=format&fit=crop'
+        ]
       },
       {
         title: 'Home Additions',
         tag: 'Additions',
         desc: 'Expand your home with a custom addition that blends seamlessly with your existing structure. From sunrooms and extra bedrooms to full second-story additions, we manage the entire process — foundation to finish. Every addition is engineered for structural integrity and built to code.',
-        photos: []
+        photos: [
+          'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=800&q=80&auto=format&fit=crop'
+        ]
       },
       {
         title: 'Custom Decks',
         tag: 'Decks',
         desc: 'Build the outdoor space you\'ve always wanted. We design and build custom decks using premium materials — pressure-treated lumber, composite decking, or multi-level designs with built-in seating and lighting. Each deck is built to last, with proper structural support and professional finishing.',
-        photos: []
+        photos: [
+          'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?w=800&q=80&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=800&q=80&auto=format&fit=crop'
+        ]
       }
     ];
 
@@ -820,10 +843,11 @@
       // Build gallery
       modalGallery.innerHTML = '';
       if (s.photos && s.photos.length > 0) {
-        // s.photos should be array like ['1.jpg','2.jpg']
+        // s.photos can contain either full URLs (http...) or local filenames like '1.jpg'
+        // Local filenames are loaded from images/{tag}/
         s.photos.forEach(p => {
           const img = document.createElement('img');
-          img.src = 'images/' + s.tag.toLowerCase() + '/' + p;
+          img.src = (p.indexOf('http') === 0) ? p : ('images/' + s.tag.toLowerCase() + '/' + p);
           img.alt = s.title + ' photo';
           img.loading = 'lazy';
           modalGallery.appendChild(img);
@@ -861,6 +885,32 @@
     });
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeModal();
+    });
+
+    // ===== CONTACT FORM =====
+    // Opens the visitor's email client with a pre-filled message to info@papioneers.com.
+    // No third-party services required — submissions arrive directly in your inbox.
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = 'New Estimate Request from ' + name;
+      const body =
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + (phone || 'Not provided') + '\n\n' +
+        'Project Details:\n' + message;
+
+      const mailto = 'mailto:info@papioneers.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
     });
   </script>
 
